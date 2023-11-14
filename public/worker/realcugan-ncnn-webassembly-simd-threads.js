@@ -857,7 +857,7 @@ function isFileURI(filename) {
     return filename.startsWith("file://")
 }
 var wasmBinaryFile;
-wasmBinaryFile = "https://cdn.jsdelivr.net/gh/9zhangzs3/tuxz@main/public/wasm/realcugan-ncnn-webassembly-simd-threads.wasm";
+wasmBinaryFile = "../wasm/realcugan-ncnn-webassembly-simd-threads.wasm";
 if (!isDataURI(wasmBinaryFile)) {
     wasmBinaryFile = locateFile(wasmBinaryFile)
 }
