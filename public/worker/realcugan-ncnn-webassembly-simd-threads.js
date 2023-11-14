@@ -53,8 +53,8 @@ Module.expectedDataFileDownloads++;
             } else if (typeof process === "undefined" && typeof location !== "undefined") {
                 PACKAGE_PATH = encodeURIComponent(location.pathname.toString().substring(0, location.pathname.toString().lastIndexOf("/")) + "/")
             }
-            var PACKAGE_NAME = "../animesr/realcugan-ncnn-webassembly-simd-threads.data";
-            var REMOTE_PACKAGE_BASE = "../animesr/realcugan-ncnn-webassembly-simd-threads.data";
+            var PACKAGE_NAME = "https://cdn.jsdelivr.net/gh/9zhangzs3/tuxz@main/public/animesr/realcugan-ncnn-webassembly-simd-threads.data";
+            var REMOTE_PACKAGE_BASE = "https://cdn.jsdelivr.net/gh/9zhangzs3/tuxz@main/public/animesr/realcugan-ncnn-webassembly-simd-threads.data";
             if (typeof Module["locateFilePackage"] === "function" && !Module["locateFile"]) {
                 Module["locateFile"] = Module["locateFilePackage"];
                 err("warning: you defined Module.locateFilePackage, that has been renamed to Module.locateFile (using your locateFilePackage for now)")
