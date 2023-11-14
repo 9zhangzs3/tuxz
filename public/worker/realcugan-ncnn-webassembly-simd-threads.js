@@ -857,7 +857,7 @@ function isFileURI(filename) {
     return filename.startsWith("file://")
 }
 var wasmBinaryFile;
-wasmBinaryFile = "../wasm/realcugan-ncnn-webassembly-simd-threads.wasm";
+wasmBinaryFile = "https://cdn.jsdelivr.net/gh/9zhangzs3/tuxz@main/public/wasm/realcugan-ncnn-webassembly-simd-threads.wasm";
 if (!isDataURI(wasmBinaryFile)) {
     wasmBinaryFile = locateFile(wasmBinaryFile)
 }
@@ -1161,7 +1161,7 @@ var PThread = {
     },
     allocateUnusedWorker: function() {
         var pthreadMainJs = locateFile("realcugan-ncnn-webassembly-simd-threads.worker.js");
-        PThread.unusedWorkers.push(new Worker(pthreadMainJs))
+        PThread.unusedWorkers.push(new Worker(workerUrl))
     },
     getNewWorker: function() {
         if (PThread.unusedWorkers.length == 0) {
